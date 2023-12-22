@@ -1,4 +1,3 @@
-import { SERVFAIL } from 'dns';
 import { ServerRespond } from './DataStreamer';
 
 export interface Row {
@@ -24,6 +23,7 @@ export class DataManipulator {
       return {
         price_abc: priceABC,
         price_def: priceDEF,
+        ratio,
         timestamp: serverResponds[0].timestamp > serverResponds[1].timestamp ?
           serverResponds[0].timestamp : serverResponds[1].timestamp,
           upper_bound: upperBound,
